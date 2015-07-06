@@ -13,9 +13,13 @@ Really, it all boils down to the following:
 * We want engineers that understand how to scale services vertically (up) and horizontally (out)
 * We want engineers that can design algorithms at scale (i.e. we want engineers that know the difference between O(N^2), O(N log N), O(N), O(log N), and O(1) when they design algorithms)
 * We want engineers that know how to build software using SOLID principles
+
 > Have you heard of SOLID principles? If you haven't then please check this out: http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod. Its a really great article on what makes for good object oriented design from Uncle Bob himself (i.e. Robert C. Martin).
+
 * We want engineers that are familiar with design patterns (i.e. Gang of Four, Domain Driven Design, etc.) and have a firm understanding of object oriented programming
+
 > Have you heard of design patterns from the Gang of Four? Take a quick glance at the book on Amazon here: http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8. You can catch up on the patterns here: http://www.dofactory.com/net/design-patterns.
+
 * *Most importantly* we want engineers that are quick learners and can apply their knowledge to solve difficult problems
 
 ## What can I expect from a *Back-End Developer* position?
