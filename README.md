@@ -1,5 +1,7 @@
 Bluebeam Software, Inc.
+
 55 South Lake
+
 Pasadena, CA 91101
 
 # What is Bluebeam looking for in a *Back-End Developer*?
@@ -28,13 +30,15 @@ As a *Back-End Developer*, you will be an integral part of the **Studio Team** a
 
 # Homework Problem for Back-End Web Developer Position
 
-It's been a long week! You have been so busy and its time to relax; so you plop yourself in front of your TV and realize you can't decide what to watch! You think to yourself, "Jon mentioned this really cool show earlier... what was it called again?" Now you can just call him, *OR* you can let the new TV service *NetFace* figure out what to watch for you. Picking up your phone... its just too heavy!
+It's been a long week! You have been so busy and its time to relax; so you plop yourself in front of your TV and realize you can't decide what to watch! You think to yourself, "Jon mentioned this really cool show earlier... what was it called again?" Now you can just call him, *OR* you can let the new TV service *NetFace* figure out what to watch for you.
 
-In this homework assignment, you will design a subset of the features for the service *NetFace* that will help solve the problem of deciding what to watch. *NetFace* is a combination of *Netflix* and *Facebook* where users sign in and make friends. At the same time, each user tracks their favorite TV shows. The idea is that users might like the same TV shows as their friends, and when they can't decide what to watch, they can tune into their friend's channel to watch new stuff. They can also tune into their own channel and let *NetFace* figure out what the TV line up should be. Finally, no more scrolling through endless TV shows for hours only to give up and watch nothing!
+In this homework assignment, you will design a subset of the features for the *NetFace* service that will help solve the problem of deciding what to watch. *NetFace* is a combination of *Netflix* and *Facebook* where users sign in and make friends. At the same time, each user tracks their favorite TV shows. The idea is that users might like the same TV shows as their friends, and when they can't decide what to watch, they can tune into their friend's channel to watch new stuff. They can also tune into their own channel and let *NetFace* figure out what the TV line up should be.
+
+Finally, no more scrolling through endless TV shows for hours only to give up and watch nothing!
 
 ## Okay, how does this work?
 
-We will provide you with an ASP.NET Web API project to extend. You will be designing the data structures on the back end to materialize the following features:
+We will provide you with an ASP.NET Web API project to extend. You will be designing the data structures and methods on the back end to materialize the following features:
 * Registering friends
 * Registering a user's favorite TV shows
 * Creating the TV Channel Line-Up
@@ -42,84 +46,30 @@ We will provide you with an ASP.NET Web API project to extend. You will be desig
 You are not required to use any external dependencies; however, if you feel strongly about it, then by all means do so.
 When you submit your assignment, please let us know how to set it up (ideally, you should provide us with a README and script to run).
 
+We start you off with a couple of key resources: *users* and *shows*.
+
 ### Users
 
-Users are the fundamental units at *NetFace*. They literally represent the people consuming of the service.
+Users are the fundamental units at *NetFace*. They literally represent the people consuming of the service. We hook you up with the following API (extend it how you see fit).
 
-We start you off with creating new users by handling the POST request:
-
-```
-POST http://localhost/users
-```
-Where it's payload might be:
-```
-{
-    "UserName": "jon",
-    "Password": "SECRETPASSWORD"
-}
-```
-
-We also start you off by handling the GET request:
-```
-GET http://localhost/users/{id}
-```
-When requesting http://localhost/users/1, it's response might be:
-```
-{
-    "UserId": 1,
-    "UserName": "jon",
-}
-```
+![](images/users.png)
 
 ### Shows
 
-Shows (i.e. TV shows) are another fundamental unit at *NetFace*. They literally represent what users pay to get access to.
+Shows (i.e. TV shows) are another fundamental unit at *NetFace*. They literally represent the available TV shows that users have access to. We hook you up with the following API (extend it how you see fit).
 
-We start you off with creating new TV-shows by handling the POST request:
+![](images/shows.png)
 
-```
-POST http://localhost/shows
-```
-Where it's payload might be:
-```
-{
-    "Name": "Breaking Bad"
-}
-```
-We also start you off by handling the GET request:
-```
-GET http://localhost/shows/{id}
-```
-When requesting http://localhost/shows/1, it's response might be:
-```
-{
-    "ShowId": 1,
-    "Name": "Breaking Bad"
-}
-```
 
-### Accessing a user's favorite shows
-
-Now that Users and Shows are a part of the system, we might want to know what a user's favorite shows are.
-
-We start you off with accessing a user's favorite shows:
-
-```
-GET http://localhost/users/{id}/shows
-```
-When requesting http://localhost/users/1/shows, it's response might be:
-```
-["Breaking Bad", "House of Cards"]
-```
 ## What you will build
 
-You can change any part of the *NetFace* app to accomplish your goals (think CRUD operations):
+You can change any part of the *NetFace* service to accomplish your goals:
 * Registering a user's friends
 * Registering a user's favorite TV shows
 * Producing a channel line up for the following scenarios:
- * The current user
- * The current user and their immediate friends
- * The current user and all their potential friends (i.e. if you are friends with Tim and Tim is friends with Eric then you would create a channel line up of the favorite shows between you, Tim and Eric)
+ * A given user
+ * A given user and their immediate friends
+ * A given user and all their potential friends (i.e. if you are friends with Tim and Tim is friends with Eric then you would create a channel line up of the favorite shows between you, Tim and Eric)
 
 You can get a visual of your API by visiting http://localhost/swagger/ui/index whenever you build.
 
@@ -149,7 +99,7 @@ So that it returns something that looks like this:
 ]
 ```
 
-Clearly that is a line up of about 3-4 hours of awesome TV!
+That's a line up of about 3-4 hours of awesome TV!
 
 ## What you will submit
 
@@ -161,4 +111,6 @@ Please create a zip file and send it over to the recruiter when you are finished
 
 This problem is purposefully vague and there are many possible solutions.
 There is no right or wrong answser. We want to see your ability to solve problems.
-That being said, don't leave anything out. We will be going over everything.
+That being said, don't leave anything out. We will be going over everything!
+
+Have fun and good luck!
