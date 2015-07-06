@@ -11,7 +11,7 @@ We are looking for talented software engineers that understand both SOA and CAA 
 Really, it all boils down to the following:
 * We want engineers that can build new services or integrate existing services with ease
 * We want engineers that understand how to scale services vertically (up) and horizontally (out)
-* We want engineers that can design algorithms at scale (i.e. we want engineers that know the difference between $O(N^2)$, $O(N \log N)$, $O(N)$, $O(\log N)$, and $O(1)$ when they design algorithms)
+* We want engineers that can design algorithms at scale (i.e. we want engineers that know the difference between O(N^2), O(N log N), O(N), O(log N), and O(1) when they design algorithms)
 * We want engineers that know how to build software using SOLID principles
 > Have you heard of SOLID principles? If you haven't then please check this out: http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod. Its a really great article on what makes for good object oriented design from Uncle Bob himself (i.e. Robert C. Martin).
 * We want engineers that are familiar with design patterns (i.e. Gang of Four, Domain Driven Design, etc.) and have a firm understanding of object oriented programming
@@ -32,16 +32,15 @@ In this homework assignment, you will design a subset of the features for the se
 
 We will provide you with an ASP.NET Web API project to extend. You will be designing the data structures on the back end to materialize the following features:
 * Registering friends
-* Registering TV shows and their episodes
 * Registering a user's favorite TV shows
-* Creating the TV Channel Line-Up from users
+* Creating the TV Channel Line-Up
 
 You are not required to use any external dependencies; however, if you feel strongly about it, then by all means do so.
 When you submit your assignment, please let us know how to set it up (ideally, you should provide us with a README and script to run).
 
 ### Users
 
-Users are the fundamental units at *NetFace*. They literally represent the consumer of the service.
+Users are the fundamental units at *NetFace*. They literally represent the people consuming of the service.
 
 We start you off with creating new users by handling the POST request:
 
@@ -51,8 +50,8 @@ POST http://localhost/users
 Where it's payload might be:
 ```
 {
-	"UserName": "jon",
-	"Password": "SECRETPASSWORD"
+    "UserName": "jon",
+    "Password": "SECRETPASSWORD"
 }
 ```
 
@@ -63,14 +62,14 @@ GET http://localhost/users/{id}
 When requesting http://localhost/users/1, it's response might be:
 ```
 {
-	"UserId": 1,
-	"UserName": "jon",
+    "UserId": 1,
+    "UserName": "jon",
 }
 ```
 
-### TV-Shows
+### Shows
 
-TV-Shows are another fundamental unit at *NetFace*. They literally represent what users pay to get access to.
+Shows (i.e. TV shows) are another fundamental unit at *NetFace*. They literally represent what users pay to get access to.
 
 We start you off with creating new TV-shows by handling the POST request:
 
@@ -80,7 +79,7 @@ POST http://localhost/shows
 Where it's payload might be:
 ```
 {
-	"Name": "Breaking Bad"
+    "Name": "Breaking Bad"
 }
 ```
 We also start you off by handling the GET request:
@@ -90,12 +89,12 @@ GET http://localhost/shows/{id}
 When requesting http://localhost/shows/1, it's response might be:
 ```
 {
-	"ShowId": 1,
-	"Name": "Breaking Bad"
+    "ShowId": 1,
+    "Name": "Breaking Bad"
 }
 ```
 
-### Accessing a User's Favorite Shows
+### Accessing a user's favorite shows
 
 Now that Users and Shows are a part of the system, we might want to know what a user's favorite shows are.
 
@@ -112,8 +111,6 @@ When requesting http://localhost/users/1/shows, it's response might be:
 
 You can change any part of the *NetFace* app to accomplish your goals (think CRUD operations):
 * Registering a user's friends
-* Registering a TV show into the system
-* Registering episodes onto a TV show
 * Registering a user's favorite TV shows
 * Producing a channel line up for the following scenarios:
  * The current user
@@ -122,14 +119,42 @@ You can change any part of the *NetFace* app to accomplish your goals (think CRU
 
 You can get a visual of your API by visiting http://localhost/swagger/ui/index whenever you build.
 
+Ultimately, we want to request something that looks like this:
+```
+GET http://localhost/users/1/channels/1/lineup
+```
+So that it returns something that looks like this:
+```
+[
+    {
+        "Name": "Breaking Bad",
+        "Episode": "Over"
+    },
+    {
+        "Name": "Breaking Bad",
+        "Episode": "4 Days Out"
+    },
+    {
+        "Name": "House of Cards",
+        "Episode": "Chapter 1",
+    },
+    {
+        "Name": "House of Cards",
+        "Episode": "Chapter 2"
+    }
+]
+```
+
+Clearly that is a line up of about 3-4 hours of awesome TV!
+
 ## What you will submit
 
 Please create a zip file and send it over to the recruiter when you are finished. It should include the following:
 * Your Solution folder and projects
 * A README file with examples on how to use your API and anything you want to address (i.e. concerns, open questions, etc.)
 
-## What we Expect
+## What we expect
 
-This problem is purposefully vague and there are many possible solutions. There is no right or wrong answser. We want to see your ability to solve problems.
-
+This problem is purposefully vague and there are many possible solutions.
+There is no right or wrong answser. We want to see your ability to solve problems.
 That being said, don't leave anything out. We will be going over everything.
