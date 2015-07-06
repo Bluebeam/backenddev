@@ -101,6 +101,14 @@ So that it returns something that looks like this:
 
 That's a line up of about 3-4 hours of awesome TV!
 
+## Where do I get the code from?
+
+Simply clone this repository and start coding.
+
+```
+git clone https://github.com/bluebeamdev/backenddev.git
+```
+
 ## What you will submit
 
 Please create a zip file and send it over to the recruiter when you are finished. It should include the following:
