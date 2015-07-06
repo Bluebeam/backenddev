@@ -8,27 +8,19 @@ Pasadena, CA 91101
 
 We are looking for talented software engineers that understand both SOA and CAA because we offer both Enterprise and Cloud system offerings.
 
-> Have you heard of Service Oriented Architecture (SOA) or Cloud as Architecture (CAA)? If you haven't then please check this out: http://blogs.vmware.com/vcloud/2010/04/soa-and-cloud-computing-are-they-the-same.html. Its a really great article on the differences between the two types of architectures.
-
 Really, it all boils down to the following:
 * We want engineers that can build new services or integrate existing services with ease
 * We want engineers that understand how to scale services vertically (up) and horizontally (out)
-* We want engineers that can design algorithms at scale (i.e. we want engineers that know the difference between O(N^2), O(N log N), O(N), O(log N), and O(1) when they design algorithms)
+* We want engineers that can design algorithms at scale and understand time and space complexity well
 * We want engineers that know how to build software using SOLID principles
-
-> Have you heard of SOLID principles? If you haven't then please check this out: http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod. Its a really great article on what makes for good object oriented design from Uncle Bob himself (i.e. Robert C. Martin).
-
-* We want engineers that are familiar with design patterns (i.e. Gang of Four, Domain Driven Design, etc.) and have a firm understanding of object oriented programming
-
-> Have you heard of design patterns from the Gang of Four? Take a quick glance at the book on Amazon here: http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8. You can catch up on the patterns here: http://www.dofactory.com/net/design-patterns.
-
+* We want engineers that are familiar with design patterns (i.e. Gang of Four) and have a firm understanding of object oriented programming
 * *Most importantly* we want engineers that are quick learners and can apply their knowledge to solve difficult problems
 
 ## What can I expect from a *Back-End Developer* position?
 
 As a *Back-End Developer*, you will be an integral part of the **Studio Team** and will be enhancing/extending the realtime collaboration services that integrate tightly with our flagship product **Revu**. Studio is powered by AWS technologies and so you will have cloud computing at your fingertips.
 
-# Homework Problem for Back-End Web Developer Position
+# Homework Problem for Back-End Developer Position
 
 It's been a long week! You have been so busy and its time to relax; so you plop yourself in front of your TV and realize you can't decide what to watch! You think to yourself, "Jon mentioned this really cool show earlier... what was it called again?" Now you can just call him, *OR* you can let the new TV service *NetFace* figure out what to watch for you.
 
@@ -38,12 +30,12 @@ Finally, no more scrolling through endless TV shows for hours only to give up an
 
 ## Okay, how does this work?
 
-We will provide you with an ASP.NET Web API project to extend. You will be designing the data structures and methods on the back end to materialize the following features:
+We provide you with an .NET Web API project to extend (it uses an in memory data store). You will be designing the data structures and methods on the back end to materialize the following features:
 * Registering friends
 * Registering a user's favorite TV shows
 * Creating the TV Channel Line-Up
 
-You are not required to use any external dependencies; however, if you feel strongly about it, then by all means do so.
+You are **not required** to use any external dependencies; however, if you feel you must, then by all means do so!
 When you submit your assignment, please let us know how to set it up (ideally, you should provide us with a README and script to run).
 
 We start you off with a couple of key resources: *users* and *shows*.
@@ -69,7 +61,7 @@ You can change any part of the *NetFace* service to accomplish your goals:
 * Producing a channel line up for the following scenarios:
  * A given user
  * A given user and their immediate friends
- * A given user and all their potential friends (i.e. if you are friends with Tim and Tim is friends with Eric then you would create a channel line up of the favorite shows between you, Tim and Eric)
+ * A given user and all their potential friends (i.e. if you are friends with Tim and Tim is friends with Eric then you would create a channel line up of the favorite shows between you, Tim and Eric--and it would be a Great Job!)
 
 You can get a visual of your API by visiting http://localhost/swagger/ui/index whenever you build.
 
@@ -77,7 +69,7 @@ Ultimately, we want to request something that looks like this:
 ```
 GET http://localhost/users/1/channels/1/lineup
 ```
-So that it returns something that looks like this:
+So that it returns something that might look like this (we leave the design decision to you):
 ```
 [
     {
