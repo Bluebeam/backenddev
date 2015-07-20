@@ -1,10 +1,10 @@
-﻿using Netface.Data;
+﻿using Bluebeam.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Netface.Responses
+namespace Bluebeam.Responses
 {
     public class UserResponse
     {

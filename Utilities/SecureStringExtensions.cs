@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Web;
 
-namespace Netface
+namespace Bluebeam
 {
     public static class SecureStringExtensions
     {

@@ -1,12 +1,12 @@
 using System.Web.Http;
 using WebActivatorEx;
-using Netface;
+using Bluebeam;
 using Swashbuckle.Application;
 using System.Net.Http;
 using System;
 using System.Web;
 
-namespace Netface
+namespace Bluebeam
 {
     public class SwaggerConfig
     {
@@ -15,7 +15,7 @@ namespace Netface
             config
                 .EnableSwagger(c =>
                 {
-                    c.SingleApiVersion("v1", "NetFace");
+                    c.SingleApiVersion("v1", "Bluebeam");
                     c.RootUrl(GetBasePath);
                     c.IncludeXmlComments(GetXmlCommentsPath());
                 })
@@ -29,12 +29,12 @@ namespace Netface
 
         private static string GetXmlCommentsPath()
         {
-            return string.Format(@"{0}\bin\Netface.xml", AppDomain.CurrentDomain.BaseDirectory);
+            return string.Format(@"{0}\bin\Bluebeam.xml", AppDomain.CurrentDomain.BaseDirectory);
         }
 
         private static string GetModelXmlCommentsPath()
         {
-            return string.Format(@"{0}\bin\Netface.xml", AppDomain.CurrentDomain.BaseDirectory);
+            return string.Format(@"{0}\bin\Bluebeam.xml", AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }

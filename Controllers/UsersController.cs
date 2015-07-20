@@ -1,6 +1,6 @@
-﻿using Netface.Data;
-using Netface.Requests;
-using Netface.Responses;
+﻿using Bluebeam.Data;
+using Bluebeam.Requests;
+using Bluebeam.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
-namespace Netface.Controllers
+namespace Bluebeam.Controllers
 {
     public class UsersController : ApiController
     {
@@ -36,18 +36,6 @@ namespace Netface.Controllers
         {
             var user = UserRepo.Instance.FindById(userId);
             return new UserResponse(user);
-        }
-
-        [HttpGet]
-        [Route("users/{userId}/shows")]
-        public List<ShowResponse> GetShowsFor(int userId)
-        {
-            var user = UserRepo.Instance.FindById(userId);
-
-            var query = from showId in user.FavoriteShowIds
-                        select new ShowResponse(ShowRepo.Instance.FindById(showId));
-
-            return query.ToList();
         }
     }
 }

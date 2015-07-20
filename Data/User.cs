@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security;
 using System.Web;
 
-namespace Netface.Data
+namespace Bluebeam.Data
 {
     public class User
     {

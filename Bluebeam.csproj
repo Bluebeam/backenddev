@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Netface</RootNamespace>
-    <AssemblyName>Netface</AssemblyName>
+    <RootNamespace>Bluebeam</RootNamespace>
+    <AssemblyName>Bluebeam</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -30,7 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Netface.xml</DocumentationFile>
+    <DocumentationFile>bin\Bluebeam.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -119,20 +119,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
-    <Compile Include="Controllers\ShowsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Data\Episode.cs" />
-    <Compile Include="Data\Show.cs" />
     <Compile Include="Data\UniqueId.cs" />
     <Compile Include="Data\User.cs" />
-    <Compile Include="Data\ShowsRepo.cs" />
     <Compile Include="Data\UserRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\EpisodeRequest.cs" />
-    <Compile Include="Requests\ShowRequest.cs" />
     <Compile Include="Requests\UserRequest.cs" />
-    <Compile Include="Responses\EpisodeResponse.cs" />
-    <Compile Include="Responses\ShowResponse.cs" />
     <Compile Include="Responses\UserResponse.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utilities\SecureStringExtensions.cs" />

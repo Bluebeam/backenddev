@@ -4,7 +4,7 @@ using System.Data.Linq;
 using System.Linq;
 using System.Web;
 
-namespace Netface.Data
+namespace Bluebeam.Data
 {
     public class UserRepo
     {
