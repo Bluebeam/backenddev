@@ -36,7 +36,9 @@ We will start you off with the key resource *users*:
 
 You can get a visual of your API by visiting http://localhost/swagger/ui/index whenever you build.
 
-The rest is up to you. Good luck!
+The rest is up to you but feel free to restructure the existing code and be sure to ensure testability in your final design.
+
+Good luck!
 
 ## Where do I get the code from?
 
